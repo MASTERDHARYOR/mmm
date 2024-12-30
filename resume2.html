@@ -3,8 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paul Adedayo Sanni- Resume</title>
+    <title>Paul Adedayo Sanni - Resume</title>
+    <link rel="icon" href="path/to/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
+        header .profile-picture {
+            background-image: url('path/to/Title1.jpg');
+            background-size: cover;
+            background-position: center;
+            display: block;
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #1b448b;
+            object-fit: cover;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -58,6 +72,21 @@
             padding: 10px;
             border-left: #77aaff 5px solid;
         }
+        .download-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .download-buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            background-color: #77aaff;
+            color: white;
+            cursor: pointer;
+        }
+        .download-buttons button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -65,11 +94,10 @@
         <div class="container">
             <h1>Paul Adedayo Sanni</h1>
             <ul>
-                <li><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</li>
-                <li><i class="fas fa-phone"></i> 09160673902, 08132528696</li>
-                <li><a href="https://www.linkedin.com/in/paul-sanni-252160220/" class="icon brands fa-linkedin-f"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                <li><a href="mailto:Adedayosanni42@gmail.com" class="icon solid fa-envelope"><i class="fas fa-envelope"></i> Email</a></li>
-                <li><a href="https://github.com/MASTERDHARYOR" class="icon brands fa-github"><i class="fab fa-github"></i> GitHub</a></li>
+                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Lagos, Nigeria</li>
+                <li><i class="fas fa-phone" aria-hidden="true"></i> 09160673902, 08132528696</li>
+                <li><a href="https://www.linkedin.com/in/paul-sanni-252160220/" class="icon brands fa-linkedin-f"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+                <li><a href="mailto:Adedayosanni42@gmail.com" class="icon solid fa-envelope"><i class="fas fa-envelope" aria-hidden="true"></i> Email</a></li>
             </ul>
         </div>
     </header>
@@ -96,8 +124,8 @@
         </section>
         <section>
             <h2>Experience</h2>
-            <h3>Data Analyst Intern | [Meriskill]</h3>
-            <p>[November 2024 - December 2024]</p>
+            <h3>Data Analyst Intern | Meriskill</h3>
+            <p>[November 2023 - December 2023]</p>
             <ul>
                 <li>Conducted detailed analysis on marketing campaigns, resulting in a 15% increase in campaign ROI through data-driven insights.</li>
                 <li>Developed interactive dashboards in Power BI, enhancing data accessibility and decision-making processes for marketing teams.</li>
@@ -121,18 +149,13 @@
             <p>Role: Data Analyst</p>
             <p>Analyzed appointment data to identify trends and waiting times, providing recommendations to improve healthcare service delivery.</p>
         </section>
-        <section>
-            <h2>Certifications</h2>
-            <ul>
-                <li>Data Science Specialization | Coursera</li>
-                <li>Machine Learning | edX</li>
-                <li>[Certification Name] | Forage</li>
-            </ul>
-        </section>
+
         <section>
             <h2>Additional Information</h2>
             <h3>Languages:</h3>
             <p>English</p>
+            <p>Yoruba</p>
+
             <h3>Publications:</h3>
             <p><a href="https://masterblogspot.wordpress.com">"Building the Total Youth" - Master Blogspot</a></p>
             <p>An article emphasizing youth empowerment through innovation and community engagement.</p>
@@ -143,9 +166,11 @@
                 <li>Top Performing Intern, Forage</li>
             </ul>
         </section>
+        <div class="download-buttons">
+            <button onclick="downloadResumeAsImage()">Download Resume as Image</button>
+            <button onclick="downloadResumeAsPDF()">Download Resume as PDF</button>
+        </div>
     </div>
-    <button onclick="downloadResumeAsImage()">Download Resume as Image</button>
-    <button onclick="downloadResumeAsPDF()">Download Resume as PDF</button>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <script>
@@ -155,7 +180,6 @@
                 link.download = 'resume.png';
                 link.href = canvas.toDataURL();
                 link.click();
-                alert('The resume has been downloaded as an image.');
             });
         }
 
@@ -173,7 +197,7 @@
             });
         }
     </script>
+    <p>Download the resume directly from the link below:</p>
+    <a href="https://example.com/path/to/your/resume.pdf" download>Download Resume as PDF</a>
 </body>
 </html>
-<p>Download the resume directly from the link below:</p>
-<a href="https://example.com/path/to/your/resume.pdf" download>Download Resume as PDF</a>
